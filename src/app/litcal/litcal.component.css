@@ -1,0 +1,17 @@
+.litcal-container {
+  padding: 20px;
+}
+
+.litcal-card {
+  margin-bottom: 10px;
+}
+
+mat-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+mat-card-subtitle {
+  font-size: 1em;
+  color: #777;
+}

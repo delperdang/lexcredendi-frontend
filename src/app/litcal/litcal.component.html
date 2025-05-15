@@ -1,1 +1,17 @@
-<p>litcal works!</p>
+<div class="litcal-container">
+  <h2>Liturgical Calendar</h2>
+
+  <mat-list>
+    <mat-list-item *ngFor="let entry of liturgicalCalendar">
+      <mat-card class="litcal-card">
+        <mat-card-header>
+          <mat-card-title>{{ entry.date }} - {{ entry.name }}</mat-card-title>
+          <mat-card-subtitle>Color: {{ entry.color }}, Season: {{ entry.season }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Rank: {{ entry.rank }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-list-item>
+  </mat-list>
+</div>
