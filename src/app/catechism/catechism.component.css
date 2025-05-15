@@ -1,0 +1,12 @@
+.catechism-container {
+  padding: 20px;
+}
+
+.catechism-card {
+  margin-bottom: 10px;
+}
+
+mat-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
