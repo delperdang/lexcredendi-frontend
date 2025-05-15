@@ -1,1 +1,18 @@
-<p>art works!</p>
+<div class="art-container">
+  <h2>Art Gallery</h2>
+
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let image of artImages">
+      <mat-card class="art-card">
+        <mat-card-header>
+          <mat-card-title>{{ image.title }}</mat-card-title>
+          <mat-card-subtitle>{{ image.artist }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="image.image" alt="{{ image.title }}">
+        <mat-card-content>
+          <p>{{ image.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,14 @@
+.art-container {
+  padding: 20px;
+}
+
+.art-card {
+  max-width: 400px;
+  margin: 10px;
+}
+
+mat-card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
