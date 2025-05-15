@@ -21,5 +21,5 @@ export const routes: Routes = [
   { path: 'meditation', component: MeditationComponent },
   { path: 'prayer', component: PrayerComponent },
   { path: 'readings', component: ReadingsComponent },
-  { path: '**', redirectTo: '' },
+  // { path: '**', redirectTo: '' },
 ];
