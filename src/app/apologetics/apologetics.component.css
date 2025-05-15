@@ -1,0 +1,16 @@
+.apologetics-container {
+  padding: 20px;
+}
+
+.apologetics-card {
+  margin-top: 10px;
+}
+
+mat-panel-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+mat-expansion-panel-header {
+  background-color: #f0f0f0;
+}
