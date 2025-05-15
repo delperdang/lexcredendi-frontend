@@ -1,1 +1,20 @@
-<p>readings works!</p>
+<div class="readings-container">
+  <h2>Daily Readings</h2>
+
+  <mat-list>
+    <mat-list-item *ngFor="let reading of readings">
+      <mat-card class="readings-card">
+        <mat-card-header>
+          <mat-card-title>{{ reading.date }} - {{ reading.feast_day }}</mat-card-title>
+          <mat-card-subtitle>Color: {{ reading.color }}, Season: {{ reading.season }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p><b>First Reading:</b> {{ reading.first_reading }}</p>
+          <p><b>Psalm:</b> {{ reading.psalm }}</p>
+          <p *ngIf="reading.second_reading"><b>Second Reading:</b> {{ reading.second_reading }}</p>
+          <p><b>Gospel:</b> {{ reading.gospel }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-list-item>
+  </mat-list>
+</div>

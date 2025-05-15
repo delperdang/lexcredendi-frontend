@@ -1,0 +1,21 @@
+.readings-container {
+  padding: 20px;
+}
+
+.readings-card {
+  margin-bottom: 10px;
+}
+
+mat-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+mat-card-subtitle {
+  font-size: 1em;
+  color: #777;
+}
+
+mat-card-content p {
+  margin: 8px 0;
+}
