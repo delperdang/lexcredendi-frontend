@@ -32,6 +32,6 @@ export class LitcalComponent implements OnInit {
   }
 
   fetchLiturgicalCalendar(): Observable<LiturgicalCalendarEntry[]> {
-    return this.http.get<LiturgicalCalendarEntry[]>('https://delperdang.pythonanywhere.com/litcal/');
+    return this.http.get<LiturgicalCalendarEntry[]>('https://delperdang.pythonanywhere.com/api/v1/litcal/');
   }
 }

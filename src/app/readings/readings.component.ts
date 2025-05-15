@@ -35,6 +35,6 @@ export class ReadingsComponent implements OnInit {
   }
 
   fetchReadings(): Observable<Reading[]> {
-    return this.http.get<Reading[]>('https://delperdang.pythonanywhere.com/readings/');
+    return this.http.get<Reading[]>('https://delperdang.pythonanywhere.com/api/v1/readings/');
   }
 }

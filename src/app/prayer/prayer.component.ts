@@ -29,6 +29,6 @@ export class PrayerComponent implements OnInit {
   }
 
   fetchPrayers(): Observable<Prayer[]> {
-    return this.http.get<Prayer[]>('https://delperdang.pythonanywhere.com/prayer/');
+    return this.http.get<Prayer[]>('https://delperdang.pythonanywhere.com/api/v1/prayer/');
   }
 }

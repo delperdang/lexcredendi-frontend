@@ -29,6 +29,6 @@ export class DoctrineComponent implements OnInit {
   }
 
   fetchDoctrineTopics(): Observable<DoctrineTopic[]> {
-    return this.http.get<DoctrineTopic[]>('https://delperdang.pythonanywhere.com/doctrine/');
+    return this.http.get<DoctrineTopic[]>('https://delperdang.pythonanywhere.com/api/v1/doctrine/');
   }
 }

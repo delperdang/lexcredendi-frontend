@@ -29,6 +29,6 @@ export class CatechismComponent implements OnInit {
   }
 
   fetchCatechismTopics(): Observable<CatechismTopic[]> {
-    return this.http.get<CatechismTopic[]>('https://delperdang.pythonanywhere.com/catechism/');
+    return this.http.get<CatechismTopic[]>('https://delperdang.pythonanywhere.com/api/v1/catechism/');
   }
 }

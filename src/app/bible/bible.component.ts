@@ -31,6 +31,6 @@ export class BibleComponent implements OnInit {
   }
 
   fetchBibleVerses(): Observable<BibleVerse[]> {
-    return this.http.get<BibleVerse[]>('https://delperdang.pythonanywhere.com/bible/');
+    return this.http.get<BibleVerse[]>('https://delperdang.pythonanywhere.com/api/v1/bible/');
   }
 }

@@ -34,6 +34,6 @@ export class ArtComponent implements OnInit {
   }
 
   fetchArtImages(): Observable<ArtImage[]> {
-    return this.http.get<ArtImage[]>('https://delperdang.pythonanywhere.com/art/');
+    return this.http.get<ArtImage[]>('https://delperdang.pythonanywhere.com/api/v1/art/');
   }
 }
