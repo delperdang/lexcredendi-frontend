@@ -2,15 +2,15 @@
   <h2>Apologetics</h2>
 
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let topic of apologeticsTopics">
-      <mat-expansion-panel-header>
+    <mat-expansion-panel *ngFor="let topic of apologeticsTopics; let i = index; trackBy: trackByCode">      <mat-expansion-panel-header>
         <mat-panel-title>
-          {{ topic.title }}
+          {{ topic.title }} (Index: {{ i }})
         </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-card class="apologetics-card">
         <mat-card-content>
           <p>{{ topic.text }}</p>
+          <p>Code: {{ topic.code }}</p>
         </mat-card-content>
       </mat-card>
     </mat-expansion-panel>

@@ -41,4 +41,8 @@ export class ApologeticsComponent implements OnInit {
   fetchApologeticsTopics(): Observable<ApologeticsTopic[]> {
     return this.http.get<ApologeticsTopic[]>('https://delperdang.pythonanywhere.com/api/v1/apologetics/');
   }
+
+  trackByCode(index: number, topic: ApologeticsTopic): string {
+    return topic.code;
+  }
 }
