@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface ApologeticsTopic {
-  id: number;
+  code: string;
   title: string;
-  content: string;
+  text: string;
 }
 
 @Component({
