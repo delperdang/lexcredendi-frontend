@@ -5,12 +5,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MatListModule } from '@angular/material/list';
 
-interface BibleVerse {
-  id: number;
-  book: string;
-  chapter: number;
-  verse: number;
-  content: string;
+interface BiblePassage {
+  code: string;
+  title: string;
+  text: string;
 }
 
 @Component({
@@ -21,16 +19,16 @@ interface BibleVerse {
   styleUrl: './bible.component.css'
 })
 export class BibleComponent implements OnInit {
-  bibleVerses: BibleVerse[] = [];
+  biblePassages: BiblePassage[] = [];
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.fetchBibleVerses().subscribe(verses => {
-      this.bibleVerses = verses;
+    this.fetchBiblePassages().subscribe(verses => {
+      this.biblePassages = verses;
     });
   }
 
-  fetchBibleVerses(): Observable<BibleVerse[]> {
-    return this.http.get<BibleVerse[]>('https://delperdang.pythonanywhere.com/api/v1/bible/');
+  fetchBiblePassages(): Observable<BiblePassage[]> {
+    return this.http.get<BiblePassage[]>('https://delperdang.pythonanywhere.com/api/v1/bible/');
   }
 }
