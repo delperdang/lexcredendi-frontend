@@ -24,7 +24,6 @@ export class ApologeticsComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
