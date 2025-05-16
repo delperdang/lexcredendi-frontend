@@ -11,15 +11,15 @@ import { ReadingsComponent } from './readings/readings.component';
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'apologetics', component: ApologeticsComponent },
-  { path: 'art', component: ArtComponent },
-  { path: 'bible', component: BibleComponent },
-  { path: 'catechism', component: CatechismComponent },
-  { path: 'doctrine', component: DoctrineComponent },
-  { path: 'litcal', component: LitcalComponent },
-  { path: 'meditation', component: MeditationComponent },
-  { path: 'prayer', component: PrayerComponent },
-  { path: 'readings', component: ReadingsComponent },
-  { path: '**', redirectTo: '' },
+  { path: '#', component: HomeComponent },
+  { path: '#/apologetics', component: ApologeticsComponent },
+  { path: '#/art', component: ArtComponent },
+  { path: '#/bible', component: BibleComponent },
+  { path: '#/catechism', component: CatechismComponent },
+  { path: '#/doctrine', component: DoctrineComponent },
+  { path: '#/litcal', component: LitcalComponent },
+  { path: '#/meditation', component: MeditationComponent },
+  { path: '#/prayer', component: PrayerComponent },
+  { path: '#/readings', component: ReadingsComponent },
+  { path: '**', redirectTo: '#' },
 ];
