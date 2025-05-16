@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClient } from '@angular/common/http';
@@ -29,20 +29,11 @@ export class ApologeticsComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchApologeticsTopics().subscribe(topics => {
-      console.log('Data received from API:', topics);
       this.apologeticsTopics = topics;
-      this.cdr.detectChanges();
-      console.log('apologeticsTopics after assignment:', this.apologeticsTopics);
-    }, error => {
-      console.error('Error fetching data:', error);
     });
   }
 
   fetchApologeticsTopics(): Observable<ApologeticsTopic[]> {
     return this.http.get<ApologeticsTopic[]>('https://delperdang.pythonanywhere.com/api/v1/apologetics/');
-  }
-
-  trackByCode(index: number, topic: ApologeticsTopic): string {
-    return topic.code;
   }
 }
