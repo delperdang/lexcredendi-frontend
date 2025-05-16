@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 interface BiblePassage {
   code: string;
@@ -14,7 +14,7 @@ interface BiblePassage {
 @Component({
   selector: 'app-bible',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatListModule],
+  imports: [CommonModule, MatCardModule, MatExpansionModule],
   templateUrl: './bible.component.html',
   styleUrl: './bible.component.css'
 })

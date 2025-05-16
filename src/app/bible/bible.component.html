@@ -1,16 +1,15 @@
 <div class="bible-container">
-  <h2>Bible Verses</h2>
+  <h2>Bible Passages</h2>
 
-  <mat-list>
-    <mat-list-item *ngFor="let passage of biblePassages">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let passage of biblePassages"><mat-expansion-panel-header>
+      <mat-panel-title>{{ passage.title }}</mat-panel-title>
+      </mat-expansion-panel-header>
       <mat-card class="bible-card">
-        <mat-card-header>
-          <mat-card-title>{{ passage.title }}</mat-card-title>
-        </mat-card-header>
         <mat-card-content>
           <p [innerHTML]="passage.text"></p>
         </mat-card-content>
       </mat-card>
-    </mat-list-item>
-  </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
