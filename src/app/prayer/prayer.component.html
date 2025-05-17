@@ -1,16 +1,16 @@
 <div class="prayer-container">
   <h2>Prayers</h2>
 
-  <mat-list>
-    <mat-list-item *ngFor="let prayer of prayers">
-      <mat-card class="prayer-card">
-        <mat-card-header>
-          <mat-card-title>{{ prayer.title }}</mat-card-title>
-        </mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let prayer of prayers"><mat-expansion-panel-header>
+      <mat-panel-title>{{ prayer.title }} | {{ prayer.latin_title }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-card class="apologetics-card">
         <mat-card-content>
-          <p>{{ prayer.content }}</p>
+          <p [innerHTML]="prayer.text"></p>
+          <p [innerHTML]="prayer.latin_text"></p>
         </mat-card-content>
       </mat-card>
-    </mat-list-item>
-  </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>

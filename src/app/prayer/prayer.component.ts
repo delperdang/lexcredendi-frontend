@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 interface Prayer {
-  id: number;
+  code: number;
   title: string;
-  content: string;
+  text: string;
+  latin_title: string;
+  latin_text: string;
 }
 
 @Component({
   selector: 'app-prayer',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatListModule],
+  imports: [CommonModule, MatCardModule, MatExpansionModule],
   templateUrl: './prayer.component.html',
   styleUrl: './prayer.component.css'
 })
