@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 interface DoctrineTopic {
-  id: number;
+  code: number;
   title: string;
-  content: string;
+  text: string;
 }
 
 @Component({
   selector: 'app-doctrine',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatListModule],
+  imports: [CommonModule, MatCardModule, MatExpansionModule],
   templateUrl: './doctrine.component.html',
   styleUrl: './doctrine.component.css'
 })

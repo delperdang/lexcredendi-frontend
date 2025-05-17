@@ -3,10 +3,14 @@
 }
 
 .doctrine-card {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-mat-card-title {
+mat-panel-title {
   font-size: 1.2em;
   font-weight: bold;
+}
+
+mat-expansion-panel-header {
+  background-color: #f0f0f0;
 }
