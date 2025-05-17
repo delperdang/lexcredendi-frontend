@@ -9,6 +9,8 @@ interface CatechismTopic {
   code: string;
   title: string;
   text: string;
+  highlight: string;
+  podcast_link_html: string;
 }
 
 @Component({
