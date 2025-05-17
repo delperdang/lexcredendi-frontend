@@ -1,16 +1,15 @@
 <div class="catechism-container">
   <h2>Catechism</h2>
 
-  <mat-list>
-    <mat-list-item *ngFor="let topic of catechismTopics">
-      <mat-card class="catechism-card">
-        <mat-card-header>
-          <mat-card-title>{{ topic.title }}</mat-card-title>
-        </mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let topic of catechismTopics"><mat-expansion-panel-header>
+      <mat-panel-title>{{ topic.title }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-card class="apologetics-card">
         <mat-card-content>
-          <p>{{ topic.content }}</p>
+          <p [innerHTML]="topic.text"></p>
         </mat-card-content>
       </mat-card>
-    </mat-list-item>
-  </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
